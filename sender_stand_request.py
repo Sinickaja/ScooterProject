@@ -13,10 +13,4 @@ response_order = post_new_order(data.order_body)  # возвращает тел�
 track = response_order.json()["track"]  # запоминает номер трека заказа
 
 
-# получение заказа по номеру трека: номер трека заказа используется в запросе configuration.GET_ORDER
-def get_order():
-    return requests.get(configuration.URL_SERVICE + configuration.GET_ORDER)
-
-
-response = get_order()
 
